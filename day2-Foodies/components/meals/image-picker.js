@@ -27,7 +27,7 @@ export default function ImagePicker({ label, name }) {
       <div className={classes.controls}>
         <div className={classes.preview}>
             {!pickImage && <p>No image picked yet.</p>}
-            {pickImage && <Image src={pickImage} fill/>}
+            {pickImage && <Image src={pickImage} alt="food image" fill/>}
         </div>
         <input
           className={classes.input}
