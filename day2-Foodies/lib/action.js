@@ -19,7 +19,7 @@ export async function shareMeal(formData){
     }
 
     if(isInvalidText(meal.title) || isInvalidText(meal.summary) || isInvalidText(meal.instructions) || !meal.image || meal.image.size === 0 || isInvalidText(meal.creator) || isInvalidText(meal.creator_email) || !meal.creator_email.includes('@')){
-      throw new Error('Invalid input');
+     return {message : 'Invalid input!'}
     }
     
     await saveMeal(meal);
