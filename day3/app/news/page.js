@@ -1,15 +1,11 @@
+import { DUMMY_NEWS } from '@/dummy-news';
+import NewsList from '@/components/news-list';
 
-const page = () => {
+export default function NewsPage() {
   return (
-    <div>
-        <h1>News Page</h1>
-        <ul>
-            <a href="/news/1"><li>News Item 1</li></a>
-            <a href="/news/2"><li>News Item 2</li></a>
-            <a href="/news/3"><li>News Item 3</li></a>
-        </ul>
-    </div>
-  )
+    <>
+      <h1>News Page</h1>
+      <NewsList news={DUMMY_NEWS} />
+    </>
+  );
 }
-
-export default page
